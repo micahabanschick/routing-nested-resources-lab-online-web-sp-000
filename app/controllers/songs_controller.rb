@@ -1,9 +1,9 @@
 class SongsController < ApplicationController
   def index
     @songs = Song.all
-    if @songs.any?{|song| Artist.find(song.artist_id).nil?}
-      redirect_to artists_path
-    end 
+    # if @songs.any?{|song| Artist.find(song.artist_id).nil?}
+    #   redirect_to artists_path
+    # end 
   end
 
   def show
