@@ -3,7 +3,7 @@ class SongsController < ApplicationController
     @songs = Song.all
     # if @songs.any?{|song| Artist.find(song.artist_id).nil?}
     #   redirect_to artists_path
-    # end 
+    # end
   end
 
   def show
@@ -53,4 +53,3 @@ class SongsController < ApplicationController
     params.require(:song).permit(:title, :artist_name)
   end
 end
-
