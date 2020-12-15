@@ -1,6 +1,6 @@
 class Song < ActiveRecord::Base
   belongs_to :artist
-  validates :artist_name, presence: true
+  # validates :artist_name, presence: true
 
   def artist_name
     self.try(:artist).try(:name)
