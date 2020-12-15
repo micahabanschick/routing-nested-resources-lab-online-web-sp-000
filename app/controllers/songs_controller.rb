@@ -9,7 +9,7 @@ class SongsController < ApplicationController
   def show
     # binding.pry
     @song = Song.find(params[:id])
-    if !@song
+    if @song == nil 
       redirect_to artist_songs_path(params[:artist_id])
     end 
   end
